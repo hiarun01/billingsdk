@@ -38,8 +38,6 @@ const NavBar = () => {
   useMotionValueEvent(scrollY, "change", (current) =>
     setIsScrolled(current >= 10),
   );
-
-  console.log(isScrolled);
   return (
     <nav
       className={cn(
