@@ -137,7 +137,6 @@ export function UsageTable({
     // 4. Map usage history rows
     const allRows = usageHistory.map((item) => getCsvRow(item));
 
-
     // 5. Conditionally add the total row
     if (showTotal && totalRow) {
       const totalItem = {
