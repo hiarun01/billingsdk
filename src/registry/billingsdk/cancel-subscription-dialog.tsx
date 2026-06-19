@@ -237,7 +237,7 @@ export function CancelSubscriptionDialog({
           )}
           {/* Action Buttons */}
           {!showConfirmation ? (
-            <div className="mt-auto flex flex-col gap-3 sm:flex-row">
+            <div className="mt-auto flex flex-col gap-3 lg:flex-row">
               <Button
                 className="flex-1"
                 onClick={handleKeepSubscription}
@@ -271,7 +271,7 @@ export function CancelSubscriptionDialog({
                     "This action cannot be undone and you'll lose access to all premium features."}
                 </p>
               </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="flex flex-col gap-3 lg:flex-row">
                 <Button
                   variant="outline"
                   className="flex-1"
