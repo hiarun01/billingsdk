@@ -326,8 +326,8 @@ export function PaymentDetailsTwo({
                           const [mm, yy] = val.split("/").map(Number);
                           if (mm < 1 || mm > 12) return "Invalid month";
                           const now = new Date();
-                          const expiry = new Date(2000 + yy, mm - 1, 1);
-                          if (expiry < now) return "Card expired";
+                          const firstInvalidDay = new Date(2000 + yy, mm, 1);
+                          if (firstInvalidDay <= now) return "Card expired";
                           return true;
                         },
                       })}

@@ -72,9 +72,9 @@ export function PaymentCard({
     } else {
       const [month, year] = expiry.split("/").map(Number);
       const now = new Date();
-      const expDate = new Date(2000 + year, month - 1);
-      if (expDate < now) {
-        newErrors.expiry = "Expiry date cannot be in the past.";
+      const firstInvalidDay = new Date(2000 + year, month, 1);
+      if (firstInvalidDay <= now) {
+        newErrors.expiry = "Card has expired.";
       }
     }
 
